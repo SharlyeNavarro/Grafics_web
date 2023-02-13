@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<button id="generate-button">Generar Gráfico</button>
+<script>
+    document.getElementById("generate-button").addEventListener("click", function(){
+        window.location.href = "{{ url_for('grafic') }}?generate=true";
+    });
+</script>
+{% endblock %}
